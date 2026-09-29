@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bymumi.gloss</title>
+</head>
+<body>
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Bymumi.gloss - Manicuría en Camilo Aldao, Córdoba">
+
+    <title>Bymumi.gloss | Manicuría</title>
+
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =========================================
+           COLORES
+        ========================================= */
+
+        :root {
+
+            --rosa: #e8b8c8;
+
+            --rosa-claro: #fff4f7;
+
+            --rosa-oscuro: #b87590;
+
+            --piel: #c5a58a;
+
+            --crema: #fffaf8;
+
+            --marron: #382b2f;
+
+            --gris: #75686d;
+
+            --borde: #eadde1;
+
+        }
+
+
+        /* =========================================
+           GENERAL
+        ========================================= */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            font-family: "DM Sans", sans-serif;
+
+            background: var(--crema);
+
+            color: var(--marron);
+
+            line-height: 1.6;
+
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+            color: inherit;
+
+        }
+
+
+        .contenedor {
+
+            width: min(1100px, 92%);
+
+            margin: auto;
+
+        }
+
+
+        /* =========================================
+           NAV
+        ========================================= */
+
+        nav {
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            z-index: 10;
+
+        }
+
+
+        .nav-contenido {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 20px 0;
+
+        }
+
+
+        .logo {
+
+            width: 75px;
+
+            height: 75px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            background: white;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.10);
+
+        }
+
+
+        .boton-nav {
+
+            background: white;
+
+            border: 1px solid rgba(56,43,47,0.15);
+
+            padding: 10px 18px;
+
+            border-radius: 30px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+
+        }
+
+
+        .boton-nav:hover {
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+
+            min-height: 700px;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff7f8,
+                    #f8dce5,
+                    #efd0da
+                );
+
+        }
+
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+
+            height: 500px;
+
+            border-radius: 50%;
+
+            right: -180px;
+
+            bottom: -220px;
+
+            background: rgba(255,255,255,0.4);
+
+        }
+
+
+        .hero-contenido {
+
+            position: relative;
+
+            z-index: 2;
+
+            padding-top: 100px;
+
+        }
+
+
+        .etiqueta {
+
+            color: var(--piel);
+
+            font-size: 12px;
+
+            letter-spacing: 3px;
+
+            font-weight: 700;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        h1 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(50px, 8vw, 90px);
+
+            line-height: 1;
+
+            font-weight: 500;
+
+            letter-spacing: -3px;
+
+        }
+
+
+        h1 span {
+
+            color: var(--rosa-oscuro);
+
+            font-style: italic;
+
+        }
+
+
+        .hero-texto {
+
+            max-width: 580px;
+
+            margin: 25px 0;
+
+            font-size: 18px;
+
+            color: var(--gris);
+
+        }
+
+
+        /* =========================================
+           BOTONES
+        ========================================= */
+
+        .botones {
+
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .boton {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 14px 23px;
+
+            border-radius: 30px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+
+        }
+
+
+        .boton:hover {
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .boton-principal {
+
+            background: var(--marron);
+
+            color: white;
+
+        }
+
+
+        .boton-secundario {
+
+            border: 1px solid var(--marron);
+
+            background: rgba(255,255,255,0.4);
+
+        }
+
+
+        /* =========================================
+           SECCIONES
+        ========================================= */
+
+        section {
+
+            padding: 90px 0;
+
+        }
+
+
+        .titulo-seccion {
+
+            margin-bottom: 40px;
+
+        }
+
+
+        .titulo-seccion h2 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 45px;
+
+            line-height: 1.1;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .titulo-seccion p {
+
+            color: var(--gris);
+
+        }
+
+
+        /* =========================================
+           SERVICIOS
+        ========================================= */
+
+        .servicios {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+
+        }
+
+
+        .tarjeta {
+
+            background: white;
+
+            border: 1px solid var(--borde);
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 15px 35px rgba(141,93,107,0.08);
+
+        }
+
+
+        .imagen-servicio {
+
+            height: 230px;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            padding: 22px;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .imagen-servicio::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 200px;
+
+            height: 200px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.35);
+
+            top: -70px;
+
+            right: -40px;
+
+        }
+
+
+        .imagen-semi {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #efc4d1,
+                    #d997ae
+                );
+
+        }
+
+
+        .imagen-kapping {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ead8cb,
+                    #d1ad91
+                );
+
+        }
+
+
+        .imagen-soft {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f5dbe4,
+                    #e5b0c3
+                );
+
+        }
+
+
+        .nombre-imagen {
+
+            position: relative;
+
+            z-index: 2;
+
+            background: rgba(255,255,255,0.8);
+
+            padding: 7px 12px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            font-weight: 700;
+
+        }
+
+
+        /* =========================================
+           TARJETAS
+        ========================================= */
+
+        .contenido-tarjeta {
+
+            padding: 24px;
+
+        }
+
+
+        .contenido-tarjeta h3 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 27px;
+
+            line-height: 1.2;
+
+        }
+
+
+        .descripcion {
+
+            color: var(--gris);
+
+            font-size: 14px;
+
+            margin: 8px 0 18px;
+
+        }
+
+
+        .precios {
+
+            border-top: 1px solid var(--borde);
+
+        }
+
+
+        .precio {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            padding: 9px 0;
+
+            border-bottom: 1px solid var(--borde);
+
+            font-size: 13px;
+
+        }
+
+
+        .precio strong {
+
+            white-space: nowrap;
+
+        }
+
+
+        .boton-consultar {
+
+            display: block;
+
+            text-align: center;
+
+            background: var(--rosa-claro);
+
+            color: var(--rosa-oscuro);
+
+            padding: 11px;
+
+            border-radius: 12px;
+
+            font-weight: 700;
+
+            margin-top: 18px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .boton-consultar:hover {
+
+            background: var(--rosa);
+
+            color: white;
+
+        }
+
+
+        /* =========================================
+           RETIROS
+        ========================================= */
+
+        .seccion-retiros {
+
+            background: #f8e9ee;
+
+        }
+
+
+        .retiros {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 15px;
+
+        }
+
+
+        .retiro {
+
+            background: white;
+
+            padding: 22px;
+
+            border-radius: 16px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 4px;
+
+        }
+
+
+        .retiro span {
+
+            color: var(--gris);
+
+            font-size: 14px;
+
+        }
+
+
+        .nota {
+
+            margin-top: 15px;
+
+            color: var(--gris);
+
+            font-size: 12px;
+
+        }
+
+
+        /* =========================================
+           TURNOS
+        ========================================= */
+
+        .turnos {
+
+            border: 1px solid var(--borde);
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .dia {
+
+            display: grid;
+
+            grid-template-columns: 160px 1fr;
+
+            gap: 25px;
+
+            align-items: center;
+
+            padding: 20px 23px;
+
+            border-bottom: 1px solid var(--borde);
+
+        }
+
+
+        .dia:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .dia strong {
+
+            color: var(--piel);
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .dia span {
+
+            font-size: 15px;
+
+        }
+
+
+        .centrado {
+
+            text-align: center;
+
+        }
+
+
+        /* =========================================
+           SOBRE MÍ
+        ========================================= */
+
+        .sobre-mi {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f9e3e9,
+                    #fff8f4
+                );
+
+        }
+
+
+        .sobre-contenido {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1.5fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+        }
+
+
+        .logo-grande {
+
+            width: min(300px, 80%);
+
+            aspect-ratio: 1;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            display: block;
+
+            margin: auto;
+
+            box-shadow:
+                0 15px 40px rgba(0,0,0,0.10);
+
+        }
+
+
+        .sobre-texto h2 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 48px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .sobre-texto p {
+
+            color: var(--gris);
+
+            max-width: 600px;
+
+        }
+
+
+        .ubicacion {
+
+            margin-top: 15px;
+
+        }
+
+
+        .redes {
+
+            display: grid;
+
+            gap: 12px;
+
+            margin-top: 25px;
+
+        }
+
+
+        .red {
+
+            background: white;
+
+            border: 1px solid var(--borde);
+
+            border-radius: 15px;
+
+            padding: 15px 18px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .red:hover {
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .red strong {
+
+            display: block;
+
+            font-size: 16px;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            background: var(--marron);
+
+            color: white;
+
+            padding: 30px 0;
+
+        }
+
+
+        .footer-contenido {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+        }
+
+
+        .footer-logo {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 25px;
+
+        }
+
+
+        /* =========================================
+           WHATSAPP
+        ========================================= */
+
+        .whatsapp {
+
+            position: fixed;
+
+            right: 20px;
+
+            bottom: 20px;
+
+            width: 55px;
+
+            height: 55px;
+
+            border-radius: 50%;
+
+            display: grid;
+
+            place-items: center;
+
+            background: #30272a;
+
+            color: white;
+
+            font-size: 25px;
+
+            z-index: 100;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.25);
+
+        }
+
+
+        /* =========================================
+           CELULAR
+        ========================================= */
+
+        @media (max-width: 850px) {
+
+            .servicios {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .retiros {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .sobre-contenido {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .hero {
+
+                min-height: 650px;
+
+            }
+
+
+            .sobre-texto {
+
+                text-align: center;
+
+            }
+
+
+            .ubicacion {
+
+                text-align: center;
+
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            section {
+
+                padding: 65px 0;
+
+            }
+
+
+            .logo {
+
+                width: 60px;
+
+                height: 60px;
+
+            }
+
+
+            h1 {
+
+                font-size: 54px;
+
+            }
+
+
+            .titulo-seccion h2 {
+
+                font-size: 37px;
+
+            }
+
+
+            .dia {
+
+                grid-template-columns: 1fr;
+
+                gap: 4px;
+
+            }
+
+
+            .footer-contenido {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         INICIO
+    ========================================= -->
+
+    <header class="hero">
+
+        <nav>
+
+            <div class="contenedor nav-contenido">
+
+                
+
+
+                <a
+                    href="#turnos"
+                    class="boton-nav"
+                >
+                    Ver turnos
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <div
+            class="contenedor hero-contenido"
+            id="inicio"
+        >
+
+            <p class="etiqueta">
+
+                MANICURÍA · CAMILO ALDAO, CÓRDOBA
+
+            </p>
+
+
+            <h1>
+
+                Uñas lindas,
+
+                <br>
+
+                <span>hechas para vos.</span>
+
+            </h1>
+
+
+            <p class="hero-texto">
+
+                Semi, kapping y soft gel.
+
+                Elegí tu servicio, mirá los precios
+
+                y consultá por tu turno.
+
+            </p>
+
+
+            <div class="botones">
+
+                <a
+                    href="#servicios"
+                    class="boton boton-principal"
+                >
+                    Ver servicios
+                </a>
+
+
+                <a
+                    href="https://wa.me/5493468560255?text=Hola%20Ludmila%2C%20quiero%20consultar%20por%20un%20turno."
+                    target="_blank"
+                    class="boton boton-secundario"
+                >
+                    Reservar por WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         SERVICIOS
+    ========================================= -->
+
+    <section id="servicios">
+
+        <div class="contenedor">
+
+
+            <div class="titulo-seccion">
+
+                <p class="etiqueta">
+                    SERVICIOS
+                </p>
+
+
+                <h2>
+                    Elegí tu servicio
+                </h2>
+
+
+                <p>
+                    Diseños personalizados según el servicio elegido.
+                </p>
+
+            </div>
+
+
+
+            <div class="servicios">
+
+
+                <!-- SEMI -->
+
+                <article class="tarjeta">
+
+
+                    <div class="imagen-servicio imagen-semi">
+
+                        <span class="nombre-imagen">
+                            SEMI
+                        </span>
+
+                    </div>
+
+
+                    <div class="contenido-tarjeta">
+
+
+                        <h3>
+                            Esmaltado semipermanente
+                        </h3>
+
+
+                        <p class="descripcion">
+                            Esmaltado duradero con opción de diseños.
+                        </p>
+
+
+                        <div class="precios">
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Semipermanente liso
+                                </span>
+
+                                <strong>
+                                    $14.000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Diseño en 2 uñas
+                                </span>
+
+                                <strong>
+                                    $15.000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Diseño en 3 uñas
+                                </span>
+
+                                <strong>
+                                    $16.000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Diseño en 4 uñas
+                                </span>
+
+                                <strong>
+                                    $17.000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Diseño en 5 uñas
+                                </span>
+
+                                <strong>
+                                    $18.000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Full diseño
+                                </span>
+
+                                <strong>
+                                    $20.000
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <a
+                            class="boton-consultar"
+                            target="_blank"
+                            href="https://wa.me/5493468560255?text=Hola%20Ludmila%2C%20quiero%20consultar%20por%20un%20turno%20de%20semi."
+                        >
+                            Consultar semi
+                        </a>
+
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- KAPPING -->
+
+                <article class="tarjeta">
+
+
+                    <div class="imagen-servicio imagen-kapping">
+
+                        <span class="nombre-imagen">
+                            KAPPING
+                        </span>
+
+                    </div>
+
+
+                    <div class="contenido-tarjeta">
+
+
+                        <h3>
+                            Kapping gel
+                        </h3>
+
+
+                        <p class="descripcion">
+                            Refuerzo de la uña natural con acabado prolijo.
+                        </p>
+
+
+                        <div class="precios">
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Kapping liso
+                                </span>
+
+                                <strong>
+                                    $17.000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Diseño en 2 uñas
+                                </span>
+
+                                <strong>
+                                    $18.000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Diseño en 3 uñas
+                                </span>
+
+                                <strong>
+                                    $19.000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Diseño en 4 uñas
+                                </span>
+
+                                <strong>
+                                    $20.000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Diseño en 5 uñas
+                                </span>
+
+                                <strong>
+                                    $21.000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Full diseño
+                                </span>
+
+                                <strong>
+                                    $23.000
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <a
+                            class="boton-consultar"
+                            target="_blank"
+                            href="https://wa.me/5493468560255?text=Hola%20Ludmila%2C%20quiero%20consultar%20por%20un%20turno%20de%20kapping."
+                        >
+                            Consultar kapping
+                        </a>
+
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- SOFT GEL -->
+
+                <article class="tarjeta">
+
+
+                    <div class="imagen-servicio imagen-soft">
+
+                        <span class="nombre-imagen">
+                            SOFT GEL
+                        </span>
+
+                    </div>
+
+
+                    <div class="contenido-tarjeta">
+
+
+                        <h3>
+                            Sistema Soft Gel
+                        </h3>
+
+
+                        <p class="descripcion">
+                            Extensión con soft gel y opción de diseños.
+                        </p>
+
+
+                        <div class="precios">
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Soft gel liso
+                                </span>
+
+                                <strong>
+                                    $18.000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Diseño en 2 uñas
+                                </span>
+
+                                <strong>
+                                    $20.000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Diseño en 3 uñas
+                                </span>
+
+                                <strong>
+                                    $21.000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Diseño en 4 uñas
+                                </span>
+
+                                <strong>
+                                    $23.000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Diseño en 5 uñas
+                                </span>
+
+                                <strong>
+                                    $24.000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="precio">
+
+                                <span>
+                                    Full diseño
+                                </span>
+
+                                <strong>
+                                    $30.000
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <a
+                            class="boton-consultar"
+                            target="_blank"
+                            href="https://wa.me/5493468560255?text=Hola%20Ludmila%2C%20quiero%20consultar%20por%20un%20turno%20de%20soft%20gel."
+                        >
+                            Consultar soft gel
+                        </a>
+
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         RETIROS
+    ========================================= -->
+
+    <section class="seccion-retiros">
+
+        <div class="contenedor">
+
+
+            <div class="titulo-seccion">
+
+                <p class="etiqueta">
+                    RETIROS
+                </p>
+
+
+                <h2>
+                    Precios de retiro
+                </h2>
+
+            </div>
+
+
+            <div class="retiros">
+
+
+                <div class="retiro">
+
+                    <span>
+                        Semi permanente
+                    </span>
+
+                    <strong>
+                        $1.000 / $2.000
+                    </strong>
+
+                </div>
+
+
+                <div class="retiro">
+
+                    <span>
+                        Kapping gel
+                    </span>
+
+                    <strong>
+                        $2.000 / $4.000
+                    </strong>
+
+                </div>
+
+
+                <div class="retiro">
+
+                    <span>
+                        Soft gel
+                    </span>
+
+                    <strong>
+                        $3.000 / $6.000
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <p class="nota">
+
+                El valor depende del tipo de retiro.
+                Consultá al reservar.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         TURNOS
+    ========================================= -->
+
+    <section id="turnos">
+
+        <div class="contenedor">
+
+
+            <div class="titulo-seccion">
+
+                <p class="etiqueta">
+                    TURNOS
+                </p>
+
+
+                <h2>
+                    Días y horarios disponibles
+                </h2>
+
+
+                <p>
+                    Elegí un horario y escribime para confirmar tu turno.
+                </p>
+
+            </div>
+
+
+            <div class="turnos">
+
+
+                <div class="dia">
+
+                    <strong>
+                        LUNES
+                    </strong>
+
+                    <span>
+                        14:00 · 15:30 · 17:00 · 18:30
+                    </span>
+
+                </div>
+
+
+                <div class="dia">
+
+                    <strong>
+                        MARTES
+                    </strong>
+
+                    <span>
+                        16:30 · 18:00 · 19:30
+                    </span>
+
+                </div>
+
+
+                <div class="dia">
+
+                    <strong>
+                        MIÉRCOLES
+                    </strong>
+
+                    <span>
+                        14:00 · 15:30 · 17:00 · 18:30
+                    </span>
+
+                </div>
+
+
+                <div class="dia">
+
+                    <strong>
+                        JUEVES
+                    </strong>
+
+                    <span>
+                        16:30 · 18:00 · 19:30
+                    </span>
+
+                </div>
+
+
+                <div class="dia">
+
+                    <strong>
+                        VIERNES
+                    </strong>
+
+                    <span>
+                        14:00 · 15:30 · 17:00 · 18:30
+                    </span>
+
+                </div>
+
+
+                <div class="dia">
+
+                    <strong>
+                        SÁBADO
+                    </strong>
+
+                    <span>
+                        14:00 · 15:30 · 17:00 · 18:30
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="centrado">
+
+                <a
+                    class="boton boton-principal"
+                    target="_blank"
+                    href="https://wa.me/5493468560255?text=Hola%20Ludmila%2C%20quiero%20sacar%20un%20turno."
+                >
+                    💗 Quiero reservar mi turno
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SOBRE MÍ
+    ========================================= -->
+
+    <section class="sobre-mi">
+
+        <div class="contenedor sobre-contenido">
+
+
+            <div>
+
+                <img
+                    src="bymumi.gloss.jpg"
+                    alt="Logo Bymumi.gloss"
+                    class="logo-grande"
+                >
+
+            </div>
+
+
+            <div class="sobre-texto">
+
+                <p class="etiqueta">
+                    SOBRE MÍ
+                </p>
+
+
+                <h2>
+                    Soy Ludmila 💗
+                </h2>
+
+
+                <p>
+
+                    Te espero en Bymumi.gloss para que tengas
+                    un momento para vos y unas uñas que te encanten.
+
+                </p>
+
+
+                <p class="ubicacion">
+
+                    📍 Camilo Aldao, Córdoba, Argentina
+
+                </p>
+
+
+                <div class="redes">
+
+
+                    <!-- INSTAGRAM -->
+
+                    <a
+                        class="red"
+                        href="https://instagram.com/Bymumi.gloss"
+                        target="_blank"
+                    >
+
+                        📸 Instagram
+
+                        <strong>
+                            @Bymumi.gloss
+                        </strong>
+
+                    </a>
+
+
+                    <!-- WHATSAPP -->
+
+                    <a
+                        class="red"
+                        href="https://wa.me/5493468560255"
+                        target="_blank"
+                    >
+
+                        📱 WhatsApp
+
+                        <strong>
+                            3468 560255
+                        </strong>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <div class="contenedor footer-contenido">
+
+            <span class="footer-logo">
+                Bymumi.gloss
+            </span>
+
+
+            <span>
+                © 2026 · Ludmila Ricatto
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         WHATSAPP FLOTANTE
+    ========================================= -->
+
+    <a
+        class="whatsapp"
+        href="https://wa.me/5493468560255"
+        target="_blank"
+        aria-label="WhatsApp"
+    >
+        ☎
+    </a>
+
+</body>
+</html>
